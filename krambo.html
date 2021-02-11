@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		</style>
+		
+	</head>
+	
+	<body>
+	
+		<center>
+			<input type="radio" id="easy" name="difficulty" value="easy" checked="checked">
+				<label for="easy">Easy</label>
+			<input type="radio" id="medium" name="difficulty" value="medium">
+				<label for="easy">Medium</label>
+			<input type="radio" id="hard" name="difficulty" value="hard">
+				<label for="easy">Hard</label>
+			<input type="radio" id="veryHard" name="difficulty" value="veryHard">
+				<label for="easy">Very Hard</label>
+		</center>
+		
+		<p>
+		
+		<center>
+			<button type="button" id="a" value="" style="width:52.5px" onclick="calcVar(this.id)"><p id="aButton" style="font-size:2.1vw;"></p></button>
+			<button type="button" id="b" value="" style="width:52.5px" onclick="calcVar(this.id)"><p id="bButton" style="font-size:2.1vw;"></p></button>
+			<button type="button" id="c" value="" style="width:52.5px" onclick="calcVar(this.id)"><p id="cButton" style="font-size:2.1vw;"></p></button>
+			<button type="button" id="d" value="" style="width:52.5px" onclick="calcVar(this.id)"><p id="dButton" style="font-size:2.1vw;"></p></button>
+			<button type="button" id="e" value="" style="width:52.5px" onclick="calcVar(this.id)"><p id="eButton" style="font-size:2.1vw;"></p></button>
+		</center>
+		
+		<p>
+		
+		<center>
+			<button type="button" id="f" value="" style="width:52.5px" onclick="calcVar(this.id)"><p id="fButton" style="font-size:2.1vw;"></p></button>
+			<button type="button" id="g" value="" style="width:52.5px" onclick="calcVar(this.id)"><p id="gButton" style="font-size:2.1vw;"></p></button>
+			<button type="button" id="h" value="" style="width:52.5px" onclick="calcVar(this.id)"><p id="hButton" style="font-size:2.1vw;"></p></button>
+		</center>
+		
+		<p>
+		
+		<center>
+			<button type="button" id="add" value="+" style="width:52.5px" onclick="calcVar(this.id)"><p style="font-size:2.1vw;">+</p></button>
+			<button type="button" id="subtract" value="-" style="width:52.5px" onclick="calcVar(this.id)"><p style="font-size:2.1vw;">-</p></button>
+			<button type="button" id="multiply" value="*" style="width:52.5px" onclick="calcVar(this.id)"><p style="font-size:2.1vw;">*</p></button>
+			<button type="button" id="divide" value="/" style="width:52.5px" onclick="calcVar(this.id)"><p style="font-size:2.1vw;">/</p></button>
+		</center>
+		
+		<p>
+		
+		<center>
+			<input type="text" id="result" style="font-size:2.1vw;" readonly>
+		</center>
+		
+		<p>
+		
+		<center>
+			<input type="text" id="krambo" style="font-size:2.1vw;" readonly>
+		</center>
+		
+		<p>
+		
+		<center>
+			<button type="button"id="kramboButton" onclick="krambo(this.id)"><p style="font-size:2.1vw;">KRAMBO</p></button>
+		</center>
+		
+		<p>
+		
+		<center>
+			Wins: <em id="wins" style="font-size:2.1vw;"></em> Losses: <em id="losses" style="font-size:2.1vw;"></em>
+		</center>
+		
+		
+		<script type="text/javascript">
+			var a = -21;
+			var b = -21;
+			var c = -21;
+			var d = -21;
+			var e = -21;
+			
+			
+			var k = -21;
+			
+			var count = 0;
+			
+			var first = null;
+			var operand = null;
+			var opFlag = false;
+			var last = null;
+			
+			var win = 0;
+			
+			var loss = 0;
+			
+			var easy = 1;
+			var medium = 0;
+			var hard = 0;
+			var veryHard = 0;
+			
+			var high = 5;
+			var low = 0;
+			
+			load();
+			
+			function load(){
+			
+				a = -21;
+				b = -21;
+				c = -21;
+				d = -21;
+				e = -21;
+				
+				k = -21;
+				
+				count = 0;
+				
+				checkDifficulty();
+    
+				while (a > high || a < low )
+				{
+    
+					a = sign(Math.floor(Math.random() * 100));
+				
+				}
+			
+				document.getElementById("a").value = a;
+				document.getElementById("aButton").innerHTML = a;
+    
+				while (b > high || b < low )
+				{
+    
+					b = sign(Math.floor(Math.random() * 100));
+    
+				}
+			
+				document.getElementById("b").value = b;
+				document.getElementById("bButton").innerHTML = b;
+			
+				while (c > high || c < low )
+				{
+    
+					c = sign(Math.floor(Math.random() * 100));
+    
+				}
+			
+				document.getElementById("c").value = c;
+				document.getElementById("cButton").innerHTML = c;
+			
+				while (d > high || d < low )
+				{
+    
+					d = sign(Math.floor(Math.random() * 100));
+    
+				}
+			
+				document.getElementById("d").value = d;
+				document.getElementById("dButton").innerHTML = d;
+			
+				while (e > high || e < low )
+				{
+    
+					e = sign(Math.floor(Math.random() * 100));
+    
+				}
+			
+				document.getElementById("e").value = e;
+				document.getElementById("eButton").innerHTML = e;
+			
+				while (k > high || k < low )
+				{
+    
+					k = sign(Math.floor(Math.random() * 100));
+				
+				}
+			
+				document.getElementById("krambo").value = k;
+				
+				document.getElementById("result").value = null;
+				
+				document.getElementById("a").disabled = false;
+				document.getElementById("b").disabled = false;
+				document.getElementById("c").disabled = false;
+				document.getElementById("d").disabled = false;
+				document.getElementById("e").disabled = false;
+				
+				document.getElementById("f").value = null;
+				document.getElementById("fButton").innerHTML = null;
+				
+				document.getElementById("g").value = null;
+				document.getElementById("gButton").innerHTML = null;
+				
+				document.getElementById("h").value = null;
+				document.getElementById("hButton").innerHTML = null;
+				
+				document.getElementById("f").disabled = true;
+				document.getElementById("g").disabled = true;
+				document.getElementById("h").disabled = true;
+				
+				document.getElementById("wins").innerHTML = win;
+				document.getElementById("losses").innerHTML = loss;
+			}
+			
+			function calcVar(click_id)
+			{
+			
+				var buf = document.getElementById(click_id).value;
+				
+				switch(buf) {
+				
+					case "+":
+						if(opFlag == false)
+						{
+							operand = buf;
+							opFlag = true;
+							count++;
+						}
+						break;
+					
+					case "-":
+						if(opFlag == false)
+						{
+							operand = buf;
+							opFlag = true;
+							count++;
+						}
+						break;
+					
+					case "*":
+						if(opFlag == false)
+						{
+							operand = buf;
+							opFlag = true;
+							count++;
+						}
+						break;
+					
+					case "/":
+						if(opFlag == false)
+						{
+							operand = buf;
+							opFlag = true;
+							count++;
+						}
+						break;
+					
+					default:
+						if(first == null)
+						{
+							first = buf;
+							document.getElementById(click_id).disabled = true;
+							count++;
+						}
+						else if(last == null)
+						{
+							last = buf;
+							document.getElementById(click_id).disabled = true;
+							count++;
+						}
+				}
+				
+				if(count % 3 == 0)
+				{
+					var ans = 0;
+					
+					switch(operand) {
+					
+						case "+":
+							ans = +first + +last;
+							break;
+						
+						case "-":
+							ans = +first - +last;
+							break;
+						
+						case "*":
+							ans = +first * +last;
+							break;	
+						
+						case "/":
+							if(last == 0)
+							{
+								krambo();
+								break;
+							}
+							else if (+first % +last == 0)
+							{
+								ans = +first / +last;
+								break;
+							}
+							else
+							{
+								krambo();
+								break;
+							}
+							break;
+					}
+					
+						opFlag = false;
+						first = null;
+						last = null;
+					
+					switch(count) {
+					
+						case 3:
+							document.getElementById("f").value = ans;
+							document.getElementById("fButton").innerHTML = ans;
+							document.getElementById("f").disabled = false;
+							break;
+						
+						case 6:
+							document.getElementById("g").value = ans;
+							document.getElementById("gButton").innerHTML = ans;
+							document.getElementById("g").disabled = false;
+							break;
+						
+						case 9:
+							document.getElementById("h").value = ans;
+							document.getElementById("hButton").innerHTML = ans;
+							document.getElementById("h").disabled = false;
+							break;
+						
+						case 12:
+							document.getElementById("result").value = ans;
+					
+					
+					
+					}
+					
+
+				
+				}
+				
+				
+			}
+			
+			function sign(number)
+			{
+				if (Math.random() < 0.5  && document.getElementById("veryHard").checked == true)
+				{
+					number = number * -1;
+					return number;
+				}
+				
+				return number;
+			}
+			
+			function checkDifficulty()
+			{
+			
+				if(document.getElementById("easy").checked == true)
+				{
+					high = 5;
+					low = 0;
+				}
+				else if (document.getElementById("medium").checked == true)
+				{
+					high = 10;
+					low = 0;
+				}
+				else if (document.getElementById("hard").checked == true)
+				{
+					high = 15;
+					low = 0;
+				}
+				else if (document.getElementById("veryHard").checked == true)
+				{
+					high = 20;
+					low = -20;
+				}
+				
+			
+			}
+			
+			function krambo()
+			{
+				if (document.getElementById("result").value == document.getElementById("krambo").value)
+				{
+					win++;
+				}
+				else
+				{
+					loss++;
+				}
+				
+				load();
+			
+			}
+			
+			/*To the extent possible under law, Neil Edward Ball, II has waived all copyright and related or neighboring rights to KRAMBO. This work is published from: United States.*/
+		</script>
+			
+	</body>
+</html>
