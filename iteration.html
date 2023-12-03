@@ -78,10 +78,10 @@
 		<p>
 		
 		<center>
-			<input type="button" id="aButton" onclick="krambo(this.id)"><p style="display:inline"></input>
-			<input type="button" id="bButton" onclick="krambo(this.id)"><p style="display:inline"></input>
-			<input type="button" id="cButton" onclick="krambo(this.id)"><p style="display:inline"></input>
-			<input type="button" id="dButton" onclick="krambo(this.id)"><p style="display:inline"></input>
+			<button id="aButton" onclick="krambo(this.id)" style="font-size: 48px"><p style="display:inline"></button>
+			<button id="bButton" onclick="krambo(this.id)" style="font-size: 48px"><p style="display:inline"></button>
+			<button id="cButton" onclick="krambo(this.id)" style="font-size: 48px"><p style="display:inline"></button>
+			<button id="dButton" onclick="krambo(this.id)" style="font-size: 48px"><p style="display:inline"></button>
 		</center>
 		
 		<script type="text/javascript">
@@ -367,55 +367,55 @@
 						if (randomizer0 == 0) {
 						
 							if(orange == banana) {
-								resultStart = 0;
-								indexStart = 0;
+								resultStart = 5;
+								indexStart = 5;
 
 							}
 							else if (orange) {
-								resultStart = 1;
-								indexStart = 1;
+								resultStart = 10;
+								indexStart = 10;
 							}
 							else if (banana) {
-								resultStart = 2;
-								indexStart = 2;
+								resultStart = 15;
+								indexStart = 15;
 							}
 							else {
-								resultStart = 3;
-								indexStart = 3;
+								resultStart = 20;
+								indexStart = 20;
 							}
 							textAreaText += "if (orange == banana):\n\n";
 						}
 						if (randomizer0 == 1) {
 							if(orange != banana) {
-								resultStart = 0;
-								indexStart = 0;
+								resultStart = 5;
+								indexStart = 5;
 							}
 							else if (orange) {
-								resultStart = 1;
-								indexStart = 1;
+								resultStart = 10;
+								indexStart = 10;
 							}
 							else if (banana) {
-								resultStart = 2;
-								indexStart = 2;
+								resultStart = 15;
+								indexStart = 15;
 							}
 							else {
-								resultStart = 3;
-								indexStart = 3;
+								resultStart = 20;
+								indexStart = 20;
 							}
 							textAreaText += "if (orange != banana):\n\n";
 						}
 						
-						textAreaText += "\tresult = 0\n";
-						textAreaText += "\tindex = 0\n";
+						textAreaText += "\tresult = 5\n";
+						textAreaText += "\tindex = 5\n";
 						textAreaText += "elif (orange):\n\n";
-						textAreaText += "\tresult = 1\n";
-						textAreaText += "\tindex = 1\n";
+						textAreaText += "\tresult = 10\n";
+						textAreaText += "\tindex = 10\n";
 						textAreaText += "elif (banana):\n\n";
-						textAreaText += "\tresult = 2\n";
-						textAreaText += "\tindex = 2\n";
+						textAreaText += "\tresult = 15\n";
+						textAreaText += "\tindex = =15\n";
 						textAreaText += "else:\n\n";
-						textAreaText += "\tresult = 3\n";
-						textAreaText += "\tindex = 3\n";
+						textAreaText += "\tresult = 20\n";
+						textAreaText += "\tindex = 20\n";
 
 					}
 					else if (randomizer == 1) {
@@ -435,204 +435,204 @@
 							textAreaText += "if (result != index):\n\n";
 						}
 						
-						textAreaText += "\tresult = 0\n";
-						textAreaText += "\tindex = 0\n";
+						textAreaText += "\tresult = 5\n";
+						textAreaText += "\tindex = 5\n";
 						
 						if (randomizer0 == 0) {
 							textAreaText += "elif (result <= index):\n\n";
-							textAreaText += "\tresult = 1\n";
-							textAreaText += "\tindex = 1\n";
+							textAreaText += "\tresult = 10\n";
+							textAreaText += "\tindex = 10\n";
 							textAreaText += "elif (result > index):\n\n";
-							textAreaText += "\tresult = 2\n";
-							textAreaText += "\tindex = 2\n";
+							textAreaText += "\tresult = 15\n";
+							textAreaText += "\tindex = 15\n";
 							if(result == index) {
-								resultStart = 0;
-								indexStart = 0;
+								resultStart = 5;
+								indexStart = 5;
 							}
 							else if (result <= index) {
-								resultStart = 1;
-								indexStart = 1;
+								resultStart = 10;
+								indexStart = 10;
 							}
 							else if (result > index) {
-								resultStart = 2;
-								indexStart = 2;
+								resultStart = 15;
+								indexStart = 15;
 							}
 							else {
-								resultStart = 3;
-								indexStart = 3;
+								resultStart = 20;
+								indexStart = 20;
 							}
 						}
 						else if (randomizer0 == 1) {
 							textAreaText += "elif (result > index):\n\n";
-							textAreaText += "\tresult = 1\n";
-							textAreaText += "\tindex = 1\n";
+							textAreaText += "\tresult = 10\n";
+							textAreaText += "\tindex = 10\n";
 							textAreaText += "elif (result <= index):\n\n";
-							textAreaText += "\tresult = 2\n";
-							textAreaText += "\tindex = 2\n";
+							textAreaText += "\tresult = 15\n";
+							textAreaText += "\tindex = 15\n";
 							if(result == index) {
-								resultStart = 0;
-								indexStart = 0;
+								resultStart = 5;
+								indexStart = 5;
 							}
 							else if (result > index) {
-								resultStart = 1;
-								indexStart = 1;
+								resultStart = 10;
+								indexStart = 10;
 							}
 							else if (result <= index) {
-								resultStart = 2;
-								indexStart = 2;
+								resultStart = 15;
+								indexStart = 15;
 							}
 							else {
-								resultStart = 3;
-								indexStart = 3;
+								resultStart = 20;
+								indexStart = 20;
 							}
 						}
 						else if (randomizer0 == 2) {
 							textAreaText += "elif (result > index):\n\n";
-							textAreaText += "\tresult = 1\n";
-							textAreaText += "\tindex = 1\n";
+							textAreaText += "\tresult = 10\n";
+							textAreaText += "\tindex = 10\n";
 							textAreaText += "elif (result <= index):\n\n";
-							textAreaText += "\tresult = 2\n";
-							textAreaText += "\tindex = 2\n";
+							textAreaText += "\tresult = 15\n";
+							textAreaText += "\tindex = 15\n";
 							if(result == index) {
-								resultStart = 0;
-								indexStart = 0;
+								resultStart = 5;
+								indexStart = 5;
 							}
 							else if (result > index) {
-								resultStart = 1;
-								indexStart = 1;
+								resultStart = 10;
+								indexStart = 10;
 							}
 							else if (result < index) {
-								resultStart = 2;
-								indexStart = 2;
+								resultStart = 15;
+								indexStart = 15;
 							}
 							else {
-								resultStart = 3;
-								indexStart = 3;
+								resultStart = 20;
+								indexStart = 20;
 							}
 						}
 						else if (randomizer0 == 3) {
 							textAreaText += "elif (result < index):\n\n";
-							textAreaText += "\tresult = 1\n";
-							textAreaText += "\tindex = 1\n";
+							textAreaText += "\tresult = 10\n";
+							textAreaText += "\tindex = 10\n";
 							textAreaText += "elif (result > index):\n\n";
-							textAreaText += "\tresult = 2\n";
-							textAreaText += "\tindex = 2\n";
+							textAreaText += "\tresult = 15\n";
+							textAreaText += "\tindex = 15\n";
 							if(result == index) {
-								resultStart = 0;
-								indexStart = 0;
+								resultStart = 5;
+								indexStart = 5;
 							}
 							else if (result < index) {
-								resultStart = 1;
-								indexStart = 1;
+								resultStart = 10;
+								indexStart = 10;
 							}
 							else if (result > index) {
-								resultStart = 2;
-								indexStart = 2;
+								resultStart = 15;
+								indexStart = 15;
 							}
 							else {
-								resultStart = 3;
-								indexStart = 3;
+								resultStart = 20;
+								indexStart = 20;
 							}
 						}
 						else if (randomizer0 == 4) {
 							textAreaText += "elif (result >= index):\n\n";
-							textAreaText += "\tresult = 1\n";
-							textAreaText += "\tindex = 1\n";
+							textAreaText += "\tresult = 10\n";
+							textAreaText += "\tindex = 10\n";
 							textAreaText += "elif (result < index):\n\n";
-							textAreaText += "\tresult = 2\n";
-							textAreaText += "\tindex = 2\n";
+							textAreaText += "\tresult = 15\n";
+							textAreaText += "\tindex = 15\n";
 							if(result != index) {
-								resultStart = 0;
-								indexStart = 0;
+								resultStart = 5;
+								indexStart = 5;
 							}
 							else if (result >= index) {
-								resultStart = 1;
-								indexStart = 1;
+								resultStart = 10;
+								indexStart = 10;
 							}
 							else if (result < index) {
-								resultStart = 2;
-								indexStart = 2;
+								resultStart = 15;
+								indexStart = 15;
 							}
 							else {
-								resultStart = 3;
-								indexStart = 3;
+								resultStart = 20;
+								indexStart = 20;
 							}
 						}
 						else if (randomizer0 == 5) {
 							textAreaText += "elif (result < index):\n\n";
-							textAreaText += "\tresult = 1\n";
-							textAreaText += "\tindex = 1\n";
+							textAreaText += "\tresult = 10\n";
+							textAreaText += "\tindex = 10\n";
 							textAreaText += "elif (result >= index):\n\n";
-							textAreaText += "\tresult = 2\n";
-							textAreaText += "\tindex = 2\n";
+							textAreaText += "\tresult = 15\n";
+							textAreaText += "\tindex = 15\n";
 							if(result != index) {
-								resultStart = 0;
-								indexStart = 0;
+								resultStart = 5;
+								indexStart = 5;
 							}
 							else if (result < index) {
-								resultStart = 1;
-								indexStart = 1;
+								resultStart = 10;
+								indexStart = 10;
 							}
 							else if (result >= index) {
-								resultStart = 2;
-								indexStart = 2;
+								resultStart = 15;
+								indexStart = 15;
 							}
 							else {
-								resultStart = 3;
-								indexStart = 3;
+								resultStart = 20;
+								indexStart = 20;
 							}
 						}
 						else if (randomizer0 == 6) {
 							textAreaText += "elif (result >= index):\n\n";
-							textAreaText += "\tresult = 1\n";
-							textAreaText += "\tindex = 1\n";
+							textAreaText += "\tresult = 10\n";
+							textAreaText += "\tindex = 10\n";
 							textAreaText += "elif (result <= index):\n\n";
-							textAreaText += "\tresult = 2\n";
-							textAreaText += "\tindex = 2\n";
+							textAreaText += "\tresult = 15\n";
+							textAreaText += "\tindex = 15\n";
 							if(result != index) {
-								resultStart = 0;
-								indexStart = 0;
+								resultStart = 5;
+								indexStart = 5;
 							}
 							else if (result >= index) {
-								resultStart = 1;
-								indexStart = 1;
+								resultStart = 10;
+								indexStart = 10;
 							}
 							else if (result <= index) {
-								resultStart = 2;
-								indexStart = 2;
+								resultStart = 15;
+								indexStart = 15;
 							}
 							else {
-								resultStart = 3;
-								indexStart = 3;
+								resultStart = 20;
+								indexStart = 20;
 							}
 						}
 						else if (randomizer0 == 7) {
 							textAreaText += "elif (result <= index):\n\n";
-							textAreaText += "\tresult = 1\n";
-							textAreaText += "\tindex = 1\n";
+							textAreaText += "\tresult = 10\n";
+							textAreaText += "\tindex = 10\n";
 							textAreaText += "elif (result >= index):\n\n";
-							textAreaText += "\tresult = 2\n";
-							textAreaText += "\tindex = 2\n";
+							textAreaText += "\tresult = 15\n";
+							textAreaText += "\tindex = 15\n";
 							if(result != index) {
-								resultStart = 0;
-								indexStart = 0;
+								resultStart = 5;
+								indexStart = 5;
 							}
 							else if (result <= index) {
-								resultStart = 1;
-								indexStart = 1;
+								resultStart = 10;
+								indexStart = 10;
 							}
 							else if (result >= index) {
-								resultStart = 2;
-								indexStart = 2;
+								resultStart = 15;
+								indexStart = 15;
 							}
 							else {
-								resultStart = 3;
-								indexStart = 3;
+								resultStart = 20;
+								indexStart = 20;
 							}
 						}
 						textAreaText += "else:\n\n";
-						textAreaText += "\tresult = 3\n";
-						textAreaText += "\tindex = 3\n";
+						textAreaText += "\tresult = 20\n";
+						textAreaText += "\tindex = 20\n";
 					}
 				}
 
@@ -662,15 +662,16 @@
 					while (randomizer0 > 3 || randomizer0 < 0) {
 						randomizer0 = Math.floor(Math.random() * 4);
 					}
-				
-					if (randomizer0 == 0) {
-				
-						document.getElementById("aButton").value = kommando;
 					
+
+					if (randomizer0 == 0) {
+
+
+						document.getElementById("aButton").value = kommando;
 						document.getElementById("bButton").value = Math.floor(Math.random() * 19);
 						document.getElementById("cButton").value = Math.floor(Math.random() * 19);
 						document.getElementById("dButton").value = Math.floor(Math.random() * 19);
-					
+
 						while (document.getElementById("aButton").value == document.getElementById("bButton").value) {
 							document.getElementById("bButton").value = Math.floor(Math.random() * 19);
 						}
@@ -685,6 +686,12 @@
 								|| document.getElementById("cButton").value == document.getElementById("dButton").value) {
 							document.getElementById("dButton").value = Math.floor(Math.random() * 19);
 						}
+						
+						document.getElementById("aButton").innerHTML = kommando;
+
+						document.getElementById("bButton").innerHTML = document.getElementById("bButton").value;
+						document.getElementById("cButton").innerHTML = document.getElementById("cButton").value;
+						document.getElementById("dButton").innerHTML = document.getElementById("dButton").value;
 				
 					}
 					else if (randomizer0 == 1) {
@@ -709,6 +716,13 @@
 								|| document.getElementById("cButton").value == document.getElementById("dButton").value) {
 							document.getElementById("dButton").value = Math.floor(Math.random() * 19);
 						}
+						
+						document.getElementById("bButton").innerHTML = kommando;
+
+						document.getElementById("aButton").innerHTML = document.getElementById("aButton").value;
+						document.getElementById("cButton").innerHTML = document.getElementById("cButton").value;
+						document.getElementById("dButton").innerHTML = document.getElementById("dButton").value;
+						
 					}
 					else if (randomizer0 == 2) {
 				
@@ -733,6 +747,12 @@
 							document.getElementById("dButton").value = Math.floor(Math.random() * 19);
 						}
 				
+						document.getElementById("cButton").innerHTML = kommando;
+
+						document.getElementById("aButton").innerHTML = document.getElementById("aButton").value;
+						document.getElementById("bButton").innerHTML = document.getElementById("bButton").value;
+						document.getElementById("dButton").innerHTML = document.getElementById("dButton").value;
+						
 					}
 					else if (randomizer0 == 3) {
 				
@@ -756,13 +776,24 @@
 								|| document.getElementById("bButton").value == document.getElementById("cButton").value) {
 							document.getElementById("cButton").value = Math.floor(Math.random() * 19);
 						}
+						
+						document.getElementById("dButton").innerHTML = kommando;
+
+						document.getElementById("aButton").innerHTML = document.getElementById("aButton").value;
+						document.getElementById("bButton").innerHTML = document.getElementById("bButton").value;
+						document.getElementById("cButton").innerHTML = document.getElementById("cButton").value;
 					}
 				}
 				else {
-					document.getElementById("aButton").value = 0;
-					document.getElementById("bButton").value = 1;
-					document.getElementById("cButton").value = 2;
-					document.getElementById("dButton").value = 3;
+					document.getElementById("aButton").value = 5;
+					document.getElementById("bButton").value = 10;
+					document.getElementById("cButton").value = 15;
+					document.getElementById("dButton").value = 20;
+					
+					document.getElementById("aButton").innerHTML = document.getElementById("aButton").value;
+					document.getElementById("bButton").innerHTML = document.getElementById("bButton").value;
+					document.getElementById("cButton").innerHTML = document.getElementById("cButton").value;
+					document.getElementById("dButton").innerHTML = document.getElementById("dButton").value;
 				}
 			}
 
@@ -819,20 +850,32 @@
 					if(veryHard || hard) {
 						document.getElementById("dragonBar").value -= kommando * 2;
 						if (kommando != 0) {
-							document.getElementById("score").value = +document.getElementById("score").value + Math.floor(+document.getElementById("knightBar").value / +document.getElementById("dragonBar").value * 200 * kommando);
+							if (+document.getElementById("dragonBar").value > 0){
+								document.getElementById("score").value = +document.getElementById("score").value + Math.floor(+document.getElementById("knightBar").value / +document.getElementById("dragonBar").value * 200 * kommando);
+							}
+							else {
+								document.getElementById("score").value = +document.getElementById("score").value + Math.floor(+document.getElementById("knightBar").value * 200 * kommando);
+							}
 						}
 						else {
-							document.getElementById("score").value = +document.getElementById("score").value + Math.floor(+document.getElementById("knightBar").value / +document.getElementById("dragonBar").value * 200);					
+							document.getElementById("score").value = +document.getElementById("score").value + Math.floor(+document.getElementById("knightBar").value * 200 * kommando);
 						}
+
 					}
 					else {
 						document.getElementById("dragonBar").value -= kommando;
 						if (kommando != 0) {
-							document.getElementById("score").value = +document.getElementById("score").value + Math.floor(+document.getElementById("knightBar").value / +document.getElementById("dragonBar").value * 100 * kommando);
+							if (+document.getElementById("dragonBar").value > 0){
+								document.getElementById("score").value = +document.getElementById("score").value + Math.floor(+document.getElementById("knightBar").value / +document.getElementById("dragonBar").value * 100 * kommando);
+							}
+							else {
+								document.getElementById("score").value = +document.getElementById("score").value + Math.floor(+document.getElementById("knightBar").value * 100 * kommando);
+							}
 						}
 						else {
-							document.getElementById("score").value = +document.getElementById("score").value + Math.floor(+document.getElementById("knightBar").value / +document.getElementById("dragonBar").value * 100);					
+							document.getElementById("score").value = +document.getElementById("score").value + Math.floor(+document.getElementById("knightBar").value * 100 * kommando);
 						}
+
 					}
 					
 
@@ -840,7 +883,7 @@
 						alert("The beast is vanquished. You win!\nYour final score: " + document.getElementById("score").value);
 						document.getElementById("dragonBar").value = 100;
 						document.getElementById("knightBar").value = 100;
-						document.getElementById("score") = 0;
+						document.getElementById("score").value = 0;
 					}
 					
 
@@ -849,7 +892,7 @@
 				{
 				
 					if (veryHard || hard) {
-						document.getElementById("knightBar").value -= kommando * 2;					
+						document.getElementById("knightBar").value -= kommando * 2;
 					}
 					else {
 						document.getElementById("knightBar").value -= kommando;
